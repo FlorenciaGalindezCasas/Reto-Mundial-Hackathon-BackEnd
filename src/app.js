@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 app.set('port', process.env.PORT || 3001);
 
-app.get('/', require('./routes'));
+app.get('/', require('./routes/index.routes'));
 
 app.use(async (error, req, res, next) => {
 
