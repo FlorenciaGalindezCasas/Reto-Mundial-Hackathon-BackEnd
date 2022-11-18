@@ -9,6 +9,6 @@ router.get("/", (req, res) => {
 
 router.use("/user", require('./user.routes')); 
 
-// router.use("/api", require("./api.routes"));
+router.use("/api", require("./api.routes"));
 
 module.exports = router;
