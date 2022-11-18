@@ -63,7 +63,7 @@
 - **LinkedIn**:
 <a href="https://www.linkedin.com/in/frank-erick-santos-gonzales-80a84015b/" style="font-size: 15px;">Frank</a>
   <p>
-    <img src="https://avatars.githubusercontent.com/u/77626612?s=96&v=4" style="border-radius: 30px; height: 250px;"/>
+    <img src="https://avatars.githubusercontent.com/u/77626612?s=400&u=a449f2af4deca41360245fea5384331c370ca18c&v=4" style="border-radius: 30px; height: 250px;"/>
   </p>
 </div>
 <div style="display: flex; flex-direction: column;">
