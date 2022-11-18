@@ -17,17 +17,17 @@ const postUser = async (req, res, next) => {
     }
 };
 
-const updateUser = async (req, res, next) => {
+const updateUser = async (userdata) => {
     try {
-        const userdata = req.userdata;
         const email = userdata.email;
         const user = await User.findOne({ email });
         if(!user) throw new Error('User not found');
         if(user.voted) throw new Error('User already voted');
         user.voted = true;
-        return res.status(200).json(user);
+        await user.save();
+        return;
     } catch (error) {
-        return next(error)
+        throw new Error(error.message)
     }
 }
 
