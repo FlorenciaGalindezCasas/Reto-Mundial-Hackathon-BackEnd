@@ -16,6 +16,7 @@ const signup = async (req, res, next) => {
         ).toString();
         const newUser = new User({ name, email, password: hashedPassword, nationality })
         let savedUser = await newUser.save();
+        req.user = savedUser;
         const tkn = genToken(savedUser._id);
         return res.status(200).json({user: savedUser, tkn});
     } catch (error) {
@@ -32,6 +33,7 @@ const signin = async (req, res, next) => {
         var originalText = bytes.toString(CryptoJS.enc.Utf8);
         if (originalText !== password) console.log("Invalid password!");
         const tkn = genToken(user._id)
+        req.user = user;
         res.status(200).json({ user, tkn });
     } catch (error) {
         return next(error)

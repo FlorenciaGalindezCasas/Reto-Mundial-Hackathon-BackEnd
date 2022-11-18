@@ -1,46 +1,42 @@
 {
-    "position": [
-        "Qatar",
-        "Ecuador",
-        "Senegal",
-        "Netherlands",
-        "England",
-        "Iran",
-        "USA",
-        "Wales"
-    ],
-    "goals": [
-        [
-            20,
-            5
+    "fase1": {
+        "position": [
+            "Qatar", "Ecuador", "Senegal", "Netherlands"
         ],
-        [
-            15,
-            6
-        ],
-        [
-            14,
-            7
-        ],
-        [
-            13,
-            8
-        ],
-        [
-            12,
-            7
-        ],
-        [
-            11,
-            4
-        ],
-        [
-            10,
-            7
-        ],
-        [
-            9,
-            5
+        "goals": [
+            [ 20, 5 ], [ 15, 6 ], [ 14, 7 ], [ 13, 8 ]
         ]
-    ]
+    },
+    "octavos": {
+        "position": [
+            "Qatar", "Ecuador", "Senegal", "Netherlands"
+        ],
+        "goals": [
+            [ 20, 5 ], [ 15, 6 ], [ 14, 7 ], [ 13, 8 ]
+        ]
+    },
+    "cuartos": {
+        "position": [
+            "Qatar", "Ecuador", "Senegal", "Netherlands"
+        ],
+        "goals": [
+            [ 20, 5 ], [ 15, 6 ], [ 14, 7 ], [ 13, 8 ]
+        ]
+    },
+    "semifinal": {
+        "position": [
+            "Qatar", "Ecuador", "Senegal", "Netherlands"
+        ],
+        "goals": [
+            [ 20, 5 ], [ 15, 6 ], [ 14, 7 ], [ 13, 8 ]
+        ]
+    },
+    "final": {
+        "position": [
+            "Qatar", "Ecuador", "Senegal", "Netherlands"
+        ],
+        "goals": [
+            [ 20, 5 ], [ 15, 6 ], [ 14, 7 ], [ 13, 8 ]
+        ]
+    }
 }
