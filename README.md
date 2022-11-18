@@ -41,7 +41,7 @@
 1. Florencia Galindez Casas:
 
 - **LinkedIn**:
-<a href="#" style="font-size: 15px;">Florencia</a>
+<a href="https://www.linkedin.com/in/florenciagalindezcasas/" style="font-size: 15px;">Florencia</a>
   <p>
     <img src="https://avatars.githubusercontent.com/u/94094158?v=4" style="border-radius: 30px; height: 250px;"/>
   </p>
@@ -71,7 +71,10 @@
 4. Lainer:
 
 - **LinkedIn**:
-<a href="#" style="font-size: 15px;">Lainer</a>
+<a href="https://www.linkedin.com/in/lainer-c%C3%A1ceres-salas" style="font-size: 15px;">Lainer</a>
+<p>
+    <img src="https://avatars.githubusercontent.com/u/81586887?v=4" style="border-radius: 30px; height: 250px;"/>
+  </p>
 </div>
 <div style="display: flex; flex-direction: column;">
 
