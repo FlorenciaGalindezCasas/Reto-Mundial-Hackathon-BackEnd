@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const { setVote, getStadistics } = require("../controllers/api");
 
-router.get("/", getStadistics);
+router.get("/", auth, getStadistics);
 
-router.post("/", setVote);
+router.post("/", auth, setVote);
 
 module.exports = router;

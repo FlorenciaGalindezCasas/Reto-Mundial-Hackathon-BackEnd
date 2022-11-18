@@ -5,11 +5,12 @@ const postUser = async (req, res, next) => {
         const userdata = req.userdata;
         const email = userdata.email;
         const user = await User.findOne({ email });
-        if (user.voted) return res.status(200).json(user);
+        if (user && user.voted) return res.status(200).json(user);
         const { nationality } = req.body;
         const name = `${userdata.given_name}${userdata.family_name}`
         const newUser = new User({name, email, nationality})
         let savedUser = await newUser.save();
+        console.log("savedUser", savedUser);
         return res.status(200).json(savedUser);
     } catch (error) {
         return next(error)

@@ -1,10 +1,14 @@
 const router = require("express").Router();
-const auth = require("../middleware/auth");
 
-router.get("/", (req, res) => res.send("Hello world!"));
+router.get("/", (req, res) => {
+    res.send(`
+    <br/><br/><br/>
+    <center><h4>Server running ok</h4></center>
+    `);
+});
 
-router.use("/user", auth, require("./user.routes"));
+router.use("/user", require('./user.routes')); 
 
-router.use("/api", auth, require("./api.routes"));
+// router.use("/api", require("./api.routes"));
 
 module.exports = router;
