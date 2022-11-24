@@ -40,9 +40,8 @@ const signin = async (req, res, next) => {
     }
 };
 
-const updateUser = async (userdata) => {
+const updateUser = async (email) => {
     try {
-        const email = userdata.email;
         const user = await User.findOne({ email });
         if (!user) throw new Error('User not found');
         if (user.voted) throw new Error('User already voted');

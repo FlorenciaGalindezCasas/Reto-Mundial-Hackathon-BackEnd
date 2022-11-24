@@ -1,44 +1,47 @@
-const Countries = require('../models/Countries')
-const { updateUser } = require('./users')
+const Countries = require('../models/Countries');
+const { updateUser } = require('./users');
 
 const setVote = async (req, res, next) => {
-  const { fase1, octavos, cuartos, semifinal, final } = req.body;
-  const { user } = req;
-  if (!fase1 || !octavos || !cuartos || !semifinal || !final) {
-    throw new Error("incomplete data")
-  }
+  const { fase1, octavos, cuartos, semifinal, final, email, campeon } = req.body;
+  // if (!fase1 || !octavos || !cuartos || !semifinal || !final || !campeon) {
+  //   throw new Error("incomplete data")
+  // }
   try {
-    await updateUser(user);
-    await savefases(fase1, "fase1");
-    await savefases(octavos, "octavos");
-    await savefases(cuartos, "cuartos");
-    await savefases(semifinal, "semifinal");
-    await savefases(final, "final");
+    await updateUser(email);
+    await savefases({ fase1, octavos, cuartos, semifinal, final, campeon })
     res.sendStatus(200);
   } catch (error) {
     return next(error);
   }
 };
 
-const savefases = async (fase, faseName) => {
-  const records = await Countries.find().where('name').in(fase.position).populate(`${faseName}goals`).exec();
-  for (let i = 0; i < records.length; i++) {
-    records[i][`${faseName}goals`].done.push(goals[i][0])
-    records[i][`${faseName}goals`].received.push(goals[i][1]);
-    records[faseName] = true;
+const savefases = async (fases) => {
+  const keys = Object.keys(fases);
+  for (const key of keys) {
+    const records = await Countries.find().where('name').in(key.position).populate(key).exec();
+    for (let i = 0; i < records.length; i++) {
+      records[i][key].done.push(goals[i][0])
+      records[i][key].received.push(goals[i][1]);
+    }
   }
   const records1Promises = records.map(record => record.save())
   await Promise.all(records1Promises);
 }
 
 const getStadistics = async (req, res, next) => {
-  let { limit = 8 } = req.query
   try {
-    const countries = await Countries.find().sort({ done: -1 }).limit(limit)
-    // res.json(countries)
+    
     res.json(require('./temp.json'));
   } catch (error) {
     return next(error);
+  }
+};
+
+const getfases = async () => {
+  const fases = ["fase1", "octavos", "cuartos", "semifinal", "final", "campeon"];
+  for (const fase of fases) {
+    const records = await Countries.find().populate(fase).sort({[[fase].done]: -1}).exec();
+    
   }
 };
 

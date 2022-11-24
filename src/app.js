@@ -5,7 +5,7 @@ const { fillteams } = require('./util/utils')
 
 const app = express();
 app.set('port', process.env.PORT || 3001);
-fillteams();
+// fillteams();
 
 app.use(cors());
 app.use(morgan("dev"));
