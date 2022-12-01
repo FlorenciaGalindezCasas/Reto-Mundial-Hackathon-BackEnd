@@ -81,7 +81,9 @@
 5. Yeick Jacson:
 
 - **LinkedIn**:
-  <a href="#" style="font-size: 15px;">Yeick</a>
-
+  <a href="https://www.linkedin.com/in/yeick-jacson-moreno-ruiz" style="font-size: 15px;">Yeick</a>
+<p>
+    <img src="https://raw.githubusercontent.com/portfolioYJ/portfolio_Yeick_Jacson/main/assets/img/profile-img2.jpg" style="border-radius: 30px; height: 250px;"/>
+  </p>
 </div>
 </div>
